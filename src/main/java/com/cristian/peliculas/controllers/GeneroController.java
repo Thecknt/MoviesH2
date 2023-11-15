@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 public class GeneroController {
 
     private IGeneroService generoService;
+
     public GeneroController(IGeneroService generoService) {
-this.generoService = generoService;
+        this.generoService = generoService;
     }
 
     @PostMapping("genero")
@@ -23,6 +24,6 @@ this.generoService = generoService;
 
     @GetMapping("genero/{id}")
     public String buscarPorId(@PathVariable(name = "id") Long id) {
-return generoService.findById(id).getNombre();
+        return generoService.findById(id).getNombre();
     }
 }

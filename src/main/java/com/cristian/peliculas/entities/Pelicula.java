@@ -1,6 +1,7 @@
 package com.cristian.peliculas.entities;
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -19,8 +20,10 @@ public class Pelicula implements Serializable {
     private String nombre;
     @Column
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaEstreno;
 
+    @OneToOne
     private Genero genero;
 
    // private List<Actor> protagonistas;
