@@ -26,7 +26,8 @@ public class Pelicula implements Serializable {
     @OneToOne
     private Genero genero;
 
-   // private List<Actor> protagonistas;
+    @ManyToMany
+    private List<Actor> protagonistas;
 
     public Long getId() {
         return id;
@@ -60,11 +61,11 @@ public class Pelicula implements Serializable {
         this.genero = genero;
     }
 
-/*    public List<Actor> getProtagonistas() {
+    public List<Actor> getProtagonistas() {
         return protagonistas;
     }
 
     public void setProtagonistas(List<Actor> protagonistas) {
         this.protagonistas = protagonistas;
-    }*/
+    }
 }
