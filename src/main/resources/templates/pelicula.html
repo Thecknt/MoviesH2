@@ -12,7 +12,9 @@
             <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="nombre" th:field="*{nombre}">
-               <!-- <div class="invalid-feed" th:if="${#fields.hasError('nombre')}" th:errors="*{nombre}"></div> -->
+              <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">
+
+              </div>
             </div>
         </div>
 
@@ -20,7 +22,9 @@
             <label for="fecha_estreno" class="col-sm-2 col-form-label">Fecha de Estreno</label>
             <div class="col-sm-8 py-3">
                 <input type="date" class="form-control" id="fecha_estreno" th:field="*{fechaEstreno}">
-                <!-- <div class="invalid-feed" th:if="${#fields.hasError('fechaEstreno')}" th:errors="*{fechaEstreno}"></div> -->
+                <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('fechaEstreno')}" th:errors="*{fechaEstreno}">
+
+                </div>
             </div>
         </div>
 
@@ -32,7 +36,9 @@
                             th:field="*{genero}">
                     </option>
                 </select>
-              <!--  <div class="invalid-feed" th:if="${#fields.hasError('genero')}" th:errors="*{genero}"></div> -->
+              <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('genero')}" th:errors="*{genero}">
+
+              </div>
             </div>
         </div>
 
@@ -45,11 +51,13 @@
                             th:data-url="${actor.urlImagen}">
                     </option>
                 </select>
-               <!-- <div class="invalid-feed" th:if="${#fields.hasError('protagonistas')}" th:errors="*{actor}"></div> -->
+               <div class="invalid-feedback d-block" th:if="${#fields.hasErrors('protagonistas')}" th:errors="*{actor}">
+
+               </div>
             </div>
         </div>
         <input id="ids" name="ids" type="text">
-        <div id="protagonistas_container">
+        <div id="protagonistas_container" class="row">
 
         </div>
         <button type="submit" class="btn btn-dark float-end">Guardar</button>

@@ -33,7 +33,6 @@ public class PeliculaController {
         this.actorService = actorService;
     }
 
-    String pelicula = "pelicula";
     @GetMapping("/pelicula")
     public String crear(Model model) {
         Pelicula pelicula = new Pelicula();
@@ -55,11 +54,13 @@ public class PeliculaController {
     }
 
     @PostMapping("/pelicula")
-    public String guardar(@Valid Pelicula pelicula, BindingResult bindingResult, @ModelAttribute(name = "ids") String ids) {
+    public String guardar(@Valid Pelicula pelicula, BindingResult bindingResult, @ModelAttribute(name = "ids") String ids, Model model) {
 
         //BindingResult es donde se guardados las variaciones del form
         //Si hay un error en el form lo envio a cargar nuevamente
         if (bindingResult.hasErrors()) {
+            model.addAttribute("generos", generoService.findAll());
+            model.addAttribute("actores", actorService.findAll());
             return "pelicula";
         }
         List<Long> idsProtagonistas = Arrays.stream(ids.split(",")).map(Long::parseLong).collect(Collectors.toList());
@@ -70,7 +71,10 @@ public class PeliculaController {
     }
 
     @GetMapping({"/", "/home", "/index"})
-    public String home() {
+    public String home(Model model) {
+        model.addAttribute("peliculas", peliculaService.findAll());
+        model.addAttribute("msj", "Catalogo Actualizado");
+        model.addAttribute("tipoMsj", "success");
         return "home";
     }
 }

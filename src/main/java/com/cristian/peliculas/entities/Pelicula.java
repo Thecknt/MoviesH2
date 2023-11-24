@@ -19,15 +19,15 @@ public class Pelicula implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty
+    @NotEmpty(message = "Debe Ingresar un nombre")
     private String nombre;
-    @Column
+    @Column(name = "fecha_estreno")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
+    @NotNull(message = "Por favor elija una fecha")
     private Date fechaEstreno;
 
-    @NotNull
+    @NotNull(message = "Debe Seleccionar al menos un Genero")
     @OneToOne
     private Genero genero;
 

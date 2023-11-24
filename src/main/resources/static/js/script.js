@@ -24,7 +24,7 @@ let htmlString = `<div class="card col-md-3 m-2" style="width: 10rem">
      <img src="{urlImagen}" class="card-img-top">
          <div class="card-body">
               <p class="card-text">${nombre}</p>
-                 <button class="btn btn-danger" data-id="{id}" onclick="eliminarActor(this)">Eliminar</button>
+                 <button class="btn btn-danger" data-id="{id}" onclick="eliminarActor(this); return false;">Eliminar</button>
          </div>
 </div>`;
 
