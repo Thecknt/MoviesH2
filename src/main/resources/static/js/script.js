@@ -29,8 +29,9 @@ let htmlString = `<div class="card col-md-3 m-2" style="width: 10rem">
 </div>`;
 
 htmlString = htmlString.replace("{urlImagen}",urlImagen);
-htmlString = htmlString.replace("{NOMBRE}",nombre);
-htmlString = htmlString.replace("{ID}",id);
+htmlString = htmlString.replace("{nombre}",nombre);
+htmlString = htmlString.replace("{id}",id);
+
 $("#protagonistas_container").append(htmlString);
 }
 

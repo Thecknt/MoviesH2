@@ -21,14 +21,14 @@ public class Pelicula implements Serializable {
 
     @NotEmpty(message = "Debe Ingresar un nombre")
     private String nombre;
+
     @Column(name = "fecha_estreno")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull(message = "Por favor elija una fecha")
     private Date fechaEstreno;
 
-    @NotNull(message = "Debe Seleccionar al menos un Genero")
-    @OneToOne
+    @ManyToOne
     private Genero genero;
 
     @ManyToMany

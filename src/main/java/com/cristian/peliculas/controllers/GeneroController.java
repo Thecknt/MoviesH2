@@ -1,6 +1,5 @@
 package com.cristian.peliculas.controllers;
 
-import com.cristian.peliculas.dao.IGeneroRepository;
 import com.cristian.peliculas.entities.Genero;
 import com.cristian.peliculas.services.IGeneroService;
 import org.springframework.web.bind.annotation.*;
