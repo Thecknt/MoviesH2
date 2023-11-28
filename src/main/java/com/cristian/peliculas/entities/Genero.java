@@ -1,6 +1,7 @@
 package com.cristian.peliculas.entities;
 
 import jakarta.persistence.*;
+
 import java.io.Serializable;
 
 @Entity
@@ -13,6 +14,7 @@ public class Genero implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     private String nombre;
 

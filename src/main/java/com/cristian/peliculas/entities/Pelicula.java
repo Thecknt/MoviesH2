@@ -28,6 +28,7 @@ public class Pelicula implements Serializable {
     @NotNull(message = "Por favor elija una fecha")
     private Date fechaEstreno;
 
+    @NotNull(message = "Debe elegir un Genero")
     @ManyToOne
     private Genero genero;
 
