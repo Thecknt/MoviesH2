@@ -6,7 +6,7 @@
 <header th:insert="~{layouts/header :: header}">
 </header>
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-5 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
         <div class="col" th:each="pelicula : ${peliculas}">
             <div class="card">
                 <img th:src="@{${'\archivo?n='} + ${pelicula.imagen == null ? 'default.jpeg' : pelicula.imagen }}"
@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h5 class="card-title" th:text="${pelicula.nombre}"></h5>
                     <p class="card-text" th:text="${pelicula.genero.nombre}"></p>
-                    <div class="catalogo-actor-container" th:each="protagonista : ${pelicula.protagonistas}">
+                    <div class="catalogo-actor-container " th:each="protagonista : ${pelicula.protagonistas}">
                         <div class="catalogo-actor-imagen" th:style="'background-image:url('+ ${protagonista.urlImagen} + ')'"></div>
                         <div class="catalogo-actor-texto" th:text="${protagonista.nombre}"></div>
                     </div>

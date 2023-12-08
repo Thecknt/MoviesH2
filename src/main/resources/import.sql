@@ -9,6 +9,7 @@ INSERT INTO ACTORES(NOMBRE, URL_IMAGEN) VALUES('Hugh Jackman','https://upload.wi
 INSERT INTO ACTORES(NOMBRE, URL_IMAGEN) VALUES('Andrew Garfield','https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flickr_-_csztova_-_Andrew_Garfield_-_TIFF_09%27_%281%29_cropped.jpg/255px-Flickr_-_csztova_-_Andrew_Garfield_-_TIFF_09%27_%281%29_cropped.jpg');
 INSERT INTO ACTORES(NOMBRE, URL_IMAGEN) VALUES('Tom Cruise','https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tom_Cruise_by_Gage_Skidmore_2.jpg/330px-Tom_Cruise_by_Gage_Skidmore_2.jpg');
 INSERT INTO ACTORES(NOMBRE, URL_IMAGEN) VALUES('Emma Stone','https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Emma_Stone_at_Maniac_UK_premiere_%28cropped%29.jpg/330px-Emma_Stone_at_Maniac_UK_premiere_%28cropped%29.jpg');
+INSERT INTO ACTORES(NOMBRE, URL_IMAGEN) VALUES('Jesse Eisenberg','https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Jesse_Eisenberg-62192_%28cropped%29.jpg/330px-Jesse_Eisenberg-62192_%28cropped%29.jpg');
 INSERT INTO PELICULAS(NOMBRE, GENERO_ID, FECHA_ESTRENO) VALUES('Matrix','1','2020-12-01');
 INSERT INTO PELICULAS(NOMBRE, GENERO_ID, FECHA_ESTRENO) VALUES('Mision Imposible','5','2023-12-01');
 INSERT INTO PELICULAS(NOMBRE, GENERO_ID, FECHA_ESTRENO) VALUES('The Amazing Spiderman','3','2012-12-01');

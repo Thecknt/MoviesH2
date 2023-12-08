@@ -1,9 +1,11 @@
 body{
-    background-color: grey;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,17,132,1) 45%, rgba(16,98,114,1) 88%);
+    color: white;
 }
 
 .catalogo-actor-container{
-    display: flex;
+    display: grid;
     align-content:stretch;
     flex-direction: row;
     justify-content: flex-start;

@@ -59,13 +59,16 @@
         <div class="row mb-3">
             <label for="archivo" class="col-sm-2 col-form-label">Subir Portada</label>
             <div class="col-sm-8 py-3">
-                <input type="file" id="archivo" name="archivo" onchange="previsualizar()">
                 <div id="vista_previa" class="d-none">
 
                 </div>
+                <input type="file" id="archivo" name="archivo" onchange="previsualizar()">
+
             </div>
         </div>
-        <input id="ids" name="ids" type="hidden">
+        <input id="ids" name="ids" type="hidden" th:value="${ids}">
+        <input id="id" name="id" type="hidden" th:field="*{id}">
+        <input id="imagen" name="imagen" type="hidden" th:field="*{imagen}">
         <div id="protagonistas_container" class="row">
 
         </div>
@@ -74,4 +77,15 @@
 </div>
 
 </body>
+<script>
+    $(function){
+        let ids= $("#ids").val();
+        let arr = ids.split(",");
+        $("#ids").val("");
+        arr.forEach(id => {
+            $("#protagonistas").val(id);
+            actorSelected($("#protagonistas")[0]); //Esto porque Jquery devuelve un listado solo le paso el 0
+        })
+    }
+</script>
 </html>
